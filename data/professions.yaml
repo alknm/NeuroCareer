@@ -1,0 +1,1092 @@
+# Profession Knowledge Base for the Hybrid Career Guidance System
+#
+# Schema per profession:
+#   id              - snake_case unique identifier
+#   name_ru, name_en - human names
+#   category        - one of: it, engineering, science, healthcare, education,
+#                              arts, business, social, trades
+#   description_ru  - 1-2 sentence description
+#   cluster_preference - balanced | mobilized | depleted | any
+#   gardner_ideal   - dict {intelligence_name: ideal_score 0..100}.
+#                     Only list intelligences that genuinely matter; others
+#                     are treated as neutral (score 50).
+#   mbti_preference - dict with 5 keys, signed [-100, +100]:
+#                       extraversion (E+ vs I-)
+#                       intuition (N+ vs S-)
+#                       thinking (T+ vs F-)
+#                       judging (J+ vs P-)
+#                       assertive (A+ vs T-)
+#                     0 = neutral, omit unused dimensions.
+#   top_roles       - 3-5 Neiry role names (Focus Expert, Optimist, ...,
+#                     Empathizer) that align with this profession.
+#
+# Trait estimates draw on Holland's RIASEC theory, Gardner's intelligences
+# work, and consensus MBTI-career mappings (Tieger et al., 16Personalities).
+# They are reasonable starting points, not validated empirical scores.
+
+professions:
+
+  # ============================================================
+  # IT / Software (8)
+  # ============================================================
+
+  - id: software_engineer
+    name_ru: "Инженер-программист"
+    name_en: "Software Engineer"
+    category: it
+    description_ru: "Проектирование и разработка программного обеспечения, работа с алгоритмами и архитектурой систем."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 85
+      Лингвистический интеллект: 60
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: -20
+      intuition: 20
+      thinking: 50
+      judging: 30
+    top_roles: [Analyst, Problem Solver, Thinker, Strategist]
+
+  - id: data_scientist
+    name_ru: "Data Scientist"
+    name_en: "Data Scientist"
+    category: it
+    description_ru: "Анализ больших данных, построение прогнозных моделей машинного обучения, статистические исследования."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 92
+      Лингвистический интеллект: 65
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: -10
+      intuition: 40
+      thinking: 60
+      judging: 20
+    top_roles: [Analyst, Problem Solver, Strategist, Thinker, Philomath]
+
+  - id: ml_engineer
+    name_ru: "Инженер машинного обучения"
+    name_en: "Machine Learning Engineer"
+    category: it
+    description_ru: "Создание и развёртывание моделей искусственного интеллекта в промышленных системах."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 90
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: -10
+      intuition: 50
+      thinking: 60
+      judging: 40
+    top_roles: [Analyst, Problem Solver, Thinker, Strategist]
+
+  - id: cybersecurity_analyst
+    name_ru: "Специалист по кибербезопасности"
+    name_en: "Cybersecurity Analyst"
+    category: it
+    description_ru: "Защита информационных систем, обнаружение и расследование инцидентов безопасности."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 82
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: -20
+      intuition: 30
+      thinking: 50
+      judging: 50
+    top_roles: [Analyst, Problem Solver, Focus Expert, Strategist]
+
+  - id: devops_engineer
+    name_ru: "DevOps инженер"
+    name_en: "DevOps Engineer"
+    category: it
+    description_ru: "Автоматизация процессов разработки и эксплуатации, управление инфраструктурой и непрерывной интеграцией."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 75
+      Межличностный интеллект: 60
+    mbti_preference:
+      extraversion: 10
+      thinking: 40
+      judging: 50
+    top_roles: [Problem Solver, Time Keeper, Deliverer, Strategist]
+
+  - id: frontend_developer
+    name_ru: "Frontend разработчик"
+    name_en: "Frontend Developer"
+    category: it
+    description_ru: "Разработка пользовательских интерфейсов веб-приложений с фокусом на дизайн и удобство использования."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 70
+      Пространственно-визуальный интеллект: 75
+      Лингвистический интеллект: 55
+    mbti_preference:
+      extraversion: 10
+      intuition: 30
+      thinking: 10
+      judging: 0
+    top_roles: [Brainstormer, Storyteller, Problem Solver, Catalyst]
+
+  - id: qa_engineer
+    name_ru: "Инженер по тестированию"
+    name_en: "QA Engineer"
+    category: it
+    description_ru: "Проверка качества программных продуктов, автоматизация тестирования и поиск дефектов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 70
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: -20
+      thinking: 30
+      judging: 60
+    top_roles: [Focus Expert, Analyst, Problem Solver, Time Keeper]
+
+  - id: database_administrator
+    name_ru: "Администратор базы данных"
+    name_en: "Database Administrator"
+    category: it
+    description_ru: "Управление базами данных, оптимизация запросов и обеспечение сохранности данных."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 80
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: -30
+      thinking: 50
+      judging: 60
+    top_roles: [Analyst, Focus Expert, Time Keeper, Problem Solver]
+
+  # ============================================================
+  # Engineering (8)
+  # ============================================================
+
+  - id: mechanical_engineer
+    name_ru: "Инженер-механик"
+    name_en: "Mechanical Engineer"
+    category: engineering
+    description_ru: "Проектирование механических систем, машин и оборудования."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 80
+      Пространственно-визуальный интеллект: 80
+      Телесно-кинестетический интеллект: 60
+    mbti_preference:
+      extraversion: -10
+      thinking: 50
+      judging: 40
+    top_roles: [Problem Solver, Analyst, Strategist, Deliverer]
+
+  - id: electrical_engineer
+    name_ru: "Инженер-электрик"
+    name_en: "Electrical Engineer"
+    category: engineering
+    description_ru: "Разработка электрических и электронных систем, автоматики и средств контроля."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 85
+      Пространственно-визуальный интеллект: 70
+    mbti_preference:
+      extraversion: -20
+      thinking: 50
+      judging: 40
+    top_roles: [Analyst, Problem Solver, Focus Expert, Strategist]
+
+  - id: civil_engineer
+    name_ru: "Инженер-строитель"
+    name_en: "Civil Engineer"
+    category: engineering
+    description_ru: "Проектирование и строительство зданий, дорог, мостов и инженерных сооружений."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 75
+      Пространственно-визуальный интеллект: 80
+      Натуралистический интеллект: 60
+    mbti_preference:
+      extraversion: 0
+      thinking: 40
+      judging: 50
+    top_roles: [Strategist, Problem Solver, Deliverer, Time Keeper]
+
+  - id: aerospace_engineer
+    name_ru: "Инженер аэрокосмической отрасли"
+    name_en: "Aerospace Engineer"
+    category: engineering
+    description_ru: "Проектирование летательных аппаратов и космических систем."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 90
+      Пространственно-визуальный интеллект: 85
+    mbti_preference:
+      extraversion: -20
+      intuition: 30
+      thinking: 60
+      judging: 40
+    top_roles: [Analyst, Problem Solver, Strategist, Thinker]
+
+  - id: process_engineer
+    name_ru: "Инженер технологических процессов"
+    name_en: "Process Engineer"
+    category: engineering
+    description_ru: "Оптимизация производственных процессов на промышленных предприятиях."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 75
+      Натуралистический интеллект: 60
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      thinking: 40
+      judging: 50
+    top_roles: [Analyst, Strategist, Time Keeper, Deliverer]
+
+  - id: robotics_engineer
+    name_ru: "Инженер робототехник"
+    name_en: "Robotics Engineer"
+    category: engineering
+    description_ru: "Разработка роботизированных систем и алгоритмов их управления."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 88
+      Пространственно-визуальный интеллект: 80
+      Телесно-кинестетический интеллект: 60
+    mbti_preference:
+      intuition: 40
+      thinking: 50
+      judging: 30
+    top_roles: [Problem Solver, Analyst, Strategist, Brainstormer]
+
+  - id: petroleum_engineer
+    name_ru: "Инженер нефтегазовой отрасли"
+    name_en: "Petroleum Engineer"
+    category: engineering
+    description_ru: "Разработка месторождений, проектирование систем добычи и переработки углеводородов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 75
+      Натуралистический интеллект: 70
+      Пространственно-визуальный интеллект: 65
+    mbti_preference:
+      thinking: 40
+      judging: 40
+    top_roles: [Strategist, Analyst, Problem Solver, Deliverer]
+
+  - id: chemical_engineer
+    name_ru: "Инженер-химик"
+    name_en: "Chemical Engineer"
+    category: engineering
+    description_ru: "Разработка и контроль химических производственных процессов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 80
+      Натуралистический интеллект: 75
+    mbti_preference:
+      thinking: 50
+      judging: 40
+    top_roles: [Analyst, Problem Solver, Focus Expert, Thinker]
+
+  # ============================================================
+  # Science / Research (7)
+  # ============================================================
+
+  - id: research_scientist
+    name_ru: "Научный исследователь"
+    name_en: "Research Scientist"
+    category: science
+    description_ru: "Проведение фундаментальных или прикладных научных исследований, публикация результатов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 85
+      Лингвистический интеллект: 75
+      Внутриличностный интеллект: 75
+    mbti_preference:
+      extraversion: -30
+      intuition: 50
+      thinking: 50
+      judging: 10
+    top_roles: [Philomath, Thinker, Analyst, Problem Solver]
+
+  - id: mathematician
+    name_ru: "Математик"
+    name_en: "Mathematician"
+    category: science
+    description_ru: "Доказательство теорем и разработка математических методов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 95
+      Внутриличностный интеллект: 75
+    mbti_preference:
+      extraversion: -50
+      intuition: 60
+      thinking: 60
+      judging: 0
+    top_roles: [Thinker, Analyst, Philomath, Problem Solver]
+
+  - id: physicist
+    name_ru: "Физик"
+    name_en: "Physicist"
+    category: science
+    description_ru: "Исследование природы материи, энергии и фундаментальных взаимодействий."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 92
+      Пространственно-визуальный интеллект: 75
+    mbti_preference:
+      extraversion: -40
+      intuition: 70
+      thinking: 60
+      judging: 0
+    top_roles: [Thinker, Analyst, Philomath, Problem Solver]
+
+  - id: biologist
+    name_ru: "Биолог"
+    name_en: "Biologist"
+    category: science
+    description_ru: "Изучение живых организмов, экосистем и биологических процессов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Натуралистический интеллект: 90
+      Логико-математический интеллект: 70
+      Лингвистический интеллект: 65
+    mbti_preference:
+      intuition: 30
+      thinking: 20
+      judging: 10
+    top_roles: [Philomath, Analyst, Thinker, Believer]
+
+  - id: chemist
+    name_ru: "Химик"
+    name_en: "Chemist"
+    category: science
+    description_ru: "Изучение состава и превращений веществ, разработка новых материалов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Натуралистический интеллект: 80
+      Логико-математический интеллект: 80
+    mbti_preference:
+      thinking: 50
+      judging: 30
+    top_roles: [Analyst, Focus Expert, Problem Solver, Philomath]
+
+  - id: statistician
+    name_ru: "Статистик"
+    name_en: "Statistician"
+    category: science
+    description_ru: "Анализ данных, разработка методов статистического вывода."
+    cluster_preference: balanced
+    gardner_ideal:
+      Логико-математический интеллект: 90
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: -30
+      thinking: 60
+      judging: 40
+    top_roles: [Analyst, Thinker, Problem Solver, Focus Expert]
+
+  - id: geologist
+    name_ru: "Геолог"
+    name_en: "Geologist"
+    category: science
+    description_ru: "Изучение состава и структуры Земли, поиск полезных ископаемых."
+    cluster_preference: balanced
+    gardner_ideal:
+      Натуралистический интеллект: 85
+      Пространственно-визуальный интеллект: 75
+      Телесно-кинестетический интеллект: 60
+    mbti_preference:
+      intuition: 20
+      thinking: 30
+      judging: 0
+    top_roles: [Philomath, Analyst, Believer, Strategist]
+
+  # ============================================================
+  # Healthcare (7)
+  # ============================================================
+
+  - id: physician
+    name_ru: "Врач общей практики"
+    name_en: "Physician (General Practitioner)"
+    category: healthcare
+    description_ru: "Диагностика и лечение пациентов, ведение медицинской документации."
+    cluster_preference: balanced
+    gardner_ideal:
+      Внутриличностный интеллект: 75
+      Межличностный интеллект: 80
+      Натуралистический интеллект: 70
+      Логико-математический интеллект: 70
+    mbti_preference:
+      extraversion: 10
+      thinking: 10
+      judging: 50
+    top_roles: [Empathizer, Problem Solver, Believer, Coach]
+
+  - id: surgeon
+    name_ru: "Хирург"
+    name_en: "Surgeon"
+    category: healthcare
+    description_ru: "Проведение операций, требующих высокой концентрации и точности."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 85
+      Пространственно-визуальный интеллект: 80
+      Внутриличностный интеллект: 75
+    mbti_preference:
+      extraversion: -10
+      thinking: 50
+      judging: 60
+    top_roles: [Focus Expert, Deliverer, Problem Solver, Commander]
+
+  - id: psychologist
+    name_ru: "Психолог"
+    name_en: "Psychologist"
+    category: healthcare
+    description_ru: "Психологическое консультирование, диагностика и поддержка клиентов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Внутриличностный интеллект: 88
+      Межличностный интеллект: 88
+      Лингвистический интеллект: 75
+    mbti_preference:
+      extraversion: 10
+      intuition: 30
+      thinking: -40
+      judging: 0
+    top_roles: [Empathizer, Coach, Storyteller, Believer]
+
+  - id: psychiatrist
+    name_ru: "Психиатр"
+    name_en: "Psychiatrist"
+    category: healthcare
+    description_ru: "Диагностика и лечение психических расстройств, медикаментозная терапия."
+    cluster_preference: balanced
+    gardner_ideal:
+      Внутриличностный интеллект: 85
+      Межличностный интеллект: 80
+      Логико-математический интеллект: 65
+    mbti_preference:
+      extraversion: -10
+      intuition: 40
+      thinking: 0
+      judging: 30
+    top_roles: [Empathizer, Analyst, Coach, Believer]
+
+  - id: nurse
+    name_ru: "Медицинская сестра"
+    name_en: "Nurse"
+    category: healthcare
+    description_ru: "Уход за пациентами, выполнение процедур, помощь врачам."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 80
+      Телесно-кинестетический интеллект: 65
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: 20
+      thinking: -30
+      judging: 50
+    top_roles: [Empathizer, Believer, Peace Keeper, Deliverer]
+
+  - id: pharmacist
+    name_ru: "Фармацевт"
+    name_en: "Pharmacist"
+    category: healthcare
+    description_ru: "Подготовка и отпуск лекарств, консультирование по фармакотерапии."
+    cluster_preference: balanced
+    gardner_ideal:
+      Натуралистический интеллект: 70
+      Логико-математический интеллект: 70
+      Межличностный интеллект: 60
+    mbti_preference:
+      thinking: 30
+      judging: 60
+    top_roles: [Focus Expert, Time Keeper, Believer, Analyst]
+
+  - id: veterinarian
+    name_ru: "Ветеринарный врач"
+    name_en: "Veterinarian"
+    category: healthcare
+    description_ru: "Лечение и профилактика заболеваний у животных."
+    cluster_preference: balanced
+    gardner_ideal:
+      Натуралистический интеллект: 85
+      Телесно-кинестетический интеллект: 65
+      Межличностный интеллект: 65
+    mbti_preference:
+      thinking: 20
+      judging: 30
+    top_roles: [Empathizer, Problem Solver, Believer, Coach]
+
+  # ============================================================
+  # Education (6)
+  # ============================================================
+
+  - id: school_teacher
+    name_ru: "Школьный учитель"
+    name_en: "School Teacher"
+    category: education
+    description_ru: "Обучение и воспитание школьников, ведение уроков по предмету."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 80
+      Межличностный интеллект: 80
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: 30
+      intuition: 10
+      thinking: -20
+      judging: 50
+    top_roles: [Coach, Empathizer, Storyteller, Believer]
+
+  - id: university_professor
+    name_ru: "Преподаватель вуза"
+    name_en: "University Professor"
+    category: education
+    description_ru: "Преподавание, научные исследования и руководство студенческими работами."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Лингвистический интеллект: 80
+      Логико-математический интеллект: 70
+      Внутриличностный интеллект: 75
+    mbti_preference:
+      intuition: 50
+      thinking: 30
+      judging: 0
+    top_roles: [Philomath, Coach, Storyteller, Thinker]
+
+  - id: career_counselor
+    name_ru: "Карьерный консультант"
+    name_en: "Career Counselor"
+    category: education
+    description_ru: "Помощь в выборе профессионального направления и развитии карьеры."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 88
+      Внутриличностный интеллект: 80
+      Лингвистический интеллект: 75
+    mbti_preference:
+      extraversion: 40
+      intuition: 30
+      thinking: -20
+      judging: 30
+    top_roles: [Coach, Empathizer, Storyteller, Catalyst]
+
+  - id: sports_coach
+    name_ru: "Спортивный тренер"
+    name_en: "Sports Coach"
+    category: education
+    description_ru: "Тренировка спортсменов, разработка тренировочных программ."
+    cluster_preference: balanced
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 85
+      Межличностный интеллект: 75
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: 40
+      thinking: 0
+      judging: 40
+    top_roles: [Coach, Catalyst, Winner, Commander]
+
+  - id: speech_therapist
+    name_ru: "Логопед"
+    name_en: "Speech Therapist"
+    category: education
+    description_ru: "Коррекция нарушений речи у детей и взрослых."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 85
+      Межличностный интеллект: 75
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: 20
+      thinking: -20
+      judging: 30
+    top_roles: [Empathizer, Coach, Storyteller, Believer]
+
+  - id: tutor
+    name_ru: "Репетитор"
+    name_en: "Tutor"
+    category: education
+    description_ru: "Индивидуальные занятия с учениками по конкретным предметам."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 75
+      Межличностный интеллект: 70
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: 10
+      thinking: 0
+      judging: 30
+    top_roles: [Coach, Storyteller, Empathizer, Philomath]
+
+  # ============================================================
+  # Arts & Creative (8)
+  # ============================================================
+
+  - id: graphic_designer
+    name_ru: "Графический дизайнер"
+    name_en: "Graphic Designer"
+    category: arts
+    description_ru: "Создание визуальных коммуникаций, логотипов, макетов и иллюстраций."
+    cluster_preference: balanced
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 88
+      Лингвистический интеллект: 60
+    mbti_preference:
+      intuition: 40
+      thinking: -30
+      judging: -10
+    top_roles: [Brainstormer, Storyteller, Catalyst, Self-Believer]
+
+  - id: ux_designer
+    name_ru: "UX-дизайнер"
+    name_en: "UX Designer"
+    category: arts
+    description_ru: "Проектирование пользовательских сценариев и интерфейсов с фокусом на удобство."
+    cluster_preference: balanced
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 80
+      Межличностный интеллект: 70
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      intuition: 50
+      thinking: 0
+      judging: 0
+    top_roles: [Brainstormer, Empathizer, Problem Solver, Catalyst]
+
+  - id: illustrator
+    name_ru: "Иллюстратор"
+    name_en: "Illustrator"
+    category: arts
+    description_ru: "Создание художественных иллюстраций для книг, журналов и цифровых продуктов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 90
+      Внутриличностный интеллект: 65
+    mbti_preference:
+      extraversion: -20
+      intuition: 60
+      thinking: -50
+      judging: -20
+    top_roles: [Brainstormer, Self-Believer, Storyteller, Philomath]
+
+  - id: musician
+    name_ru: "Музыкант"
+    name_en: "Musician"
+    category: arts
+    description_ru: "Создание и исполнение музыкальных произведений."
+    cluster_preference: balanced
+    gardner_ideal:
+      Музыкальный интеллект: 92
+      Телесно-кинестетический интеллект: 65
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      intuition: 50
+      thinking: -50
+      judging: -20
+    top_roles: [Self-Believer, Brainstormer, Storyteller, Catalyst]
+
+  - id: writer
+    name_ru: "Писатель"
+    name_en: "Writer"
+    category: arts
+    description_ru: "Создание литературных произведений: романов, эссе, сценариев."
+    cluster_preference: depleted
+    gardner_ideal:
+      Лингвистический интеллект: 92
+      Внутриличностный интеллект: 80
+    mbti_preference:
+      extraversion: -50
+      intuition: 70
+      thinking: -30
+      judging: -10
+    top_roles: [Storyteller, Philomath, Self-Believer, Brainstormer]
+
+  - id: filmmaker
+    name_ru: "Режиссёр кино"
+    name_en: "Filmmaker / Director"
+    category: arts
+    description_ru: "Создание кинофильмов: разработка идей, работа со съёмочной группой и актёрами."
+    cluster_preference: balanced
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 80
+      Межличностный интеллект: 75
+      Лингвистический интеллект: 75
+    mbti_preference:
+      intuition: 60
+      thinking: 0
+      judging: 0
+    top_roles: [Storyteller, Brainstormer, Commander, Catalyst]
+
+  - id: architect
+    name_ru: "Архитектор"
+    name_en: "Architect"
+    category: arts
+    description_ru: "Проектирование зданий и пространств, сочетание эстетики и инженерии."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 90
+      Логико-математический интеллект: 75
+    mbti_preference:
+      extraversion: -20
+      intuition: 50
+      thinking: 30
+      judging: 30
+    top_roles: [Brainstormer, Strategist, Self-Believer, Analyst]
+
+  - id: photographer
+    name_ru: "Фотограф"
+    name_en: "Photographer"
+    category: arts
+    description_ru: "Создание художественных и документальных фотографий."
+    cluster_preference: balanced
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 85
+      Внутриличностный интеллект: 65
+      Натуралистический интеллект: 60
+    mbti_preference:
+      intuition: 40
+      thinking: -20
+      judging: -30
+    top_roles: [Self-Believer, Brainstormer, Storyteller, Philomath]
+
+  # ============================================================
+  # Business / Management (8)
+  # ============================================================
+
+  - id: project_manager
+    name_ru: "Руководитель проекта"
+    name_en: "Project Manager"
+    category: business
+    description_ru: "Планирование и контроль выполнения проектов, координация команды и сроков."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 80
+      Внутриличностный интеллект: 75
+      Логико-математический интеллект: 65
+    mbti_preference:
+      extraversion: 40
+      thinking: 30
+      judging: 70
+    top_roles: [Commander, Time Keeper, Strategist, Deliverer]
+
+  - id: product_manager
+    name_ru: "Продакт-менеджер"
+    name_en: "Product Manager"
+    category: business
+    description_ru: "Управление продуктом: исследование рынка, постановка задач команде, развитие функциональности."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Межличностный интеллект: 80
+      Внутриличностный интеллект: 75
+      Логико-математический интеллект: 70
+    mbti_preference:
+      extraversion: 30
+      intuition: 50
+      thinking: 30
+      judging: 30
+    top_roles: [Strategist, Brainstormer, Commander, Analyst]
+
+  - id: business_analyst
+    name_ru: "Бизнес-аналитик"
+    name_en: "Business Analyst"
+    category: business
+    description_ru: "Анализ бизнес-процессов и данных, формулирование требований к решениям."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 80
+      Лингвистический интеллект: 75
+      Межличностный интеллект: 70
+    mbti_preference:
+      extraversion: 10
+      intuition: 30
+      thinking: 50
+      judging: 50
+    top_roles: [Analyst, Strategist, Problem Solver, Storyteller]
+
+  - id: entrepreneur
+    name_ru: "Предприниматель"
+    name_en: "Entrepreneur"
+    category: business
+    description_ru: "Создание и развитие собственного бизнеса, поиск возможностей на рынке."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Межличностный интеллект: 80
+      Внутриличностный интеллект: 80
+      Логико-математический интеллект: 65
+    mbti_preference:
+      extraversion: 50
+      intuition: 60
+      thinking: 30
+      judging: 0
+      assertive: 70
+    top_roles: [Winner, Catalyst, Strategist, Self-Believer]
+
+  - id: marketing_manager
+    name_ru: "Маркетинг-менеджер"
+    name_en: "Marketing Manager"
+    category: business
+    description_ru: "Разработка маркетинговых стратегий и продвижение продуктов."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 75
+      Межличностный интеллект: 80
+      Пространственно-визуальный интеллект: 60
+    mbti_preference:
+      extraversion: 60
+      intuition: 50
+      thinking: -10
+      judging: 20
+    top_roles: [Storyteller, Catalyst, Brainstormer, Optimist]
+
+  - id: sales_manager
+    name_ru: "Менеджер по продажам"
+    name_en: "Sales Manager"
+    category: business
+    description_ru: "Поиск клиентов, ведение переговоров, заключение сделок."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 85
+      Лингвистический интеллект: 75
+    mbti_preference:
+      extraversion: 70
+      intuition: 0
+      thinking: 0
+      judging: 30
+      assertive: 60
+    top_roles: [Winner, Optimist, Catalyst, Storyteller]
+
+  - id: hr_manager
+    name_ru: "HR-менеджер"
+    name_en: "HR Manager"
+    category: business
+    description_ru: "Подбор персонала, управление развитием сотрудников и корпоративной культурой."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 88
+      Внутриличностный интеллект: 75
+      Лингвистический интеллект: 70
+    mbti_preference:
+      extraversion: 50
+      thinking: -30
+      judging: 40
+    top_roles: [Empathizer, Coach, Peace Keeper, Catalyst]
+
+  - id: management_consultant
+    name_ru: "Консультант по управлению"
+    name_en: "Management Consultant"
+    category: business
+    description_ru: "Решение стратегических задач организаций, оптимизация бизнес-процессов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Логико-математический интеллект: 75
+      Межличностный интеллект: 80
+      Внутриличностный интеллект: 80
+      Лингвистический интеллект: 75
+    mbti_preference:
+      extraversion: 30
+      intuition: 50
+      thinking: 50
+      judging: 50
+    top_roles: [Strategist, Analyst, Commander, Storyteller]
+
+  # ============================================================
+  # Social / Communication (6)
+  # ============================================================
+
+  - id: social_worker
+    name_ru: "Социальный работник"
+    name_en: "Social Worker"
+    category: social
+    description_ru: "Помощь людям в сложных жизненных ситуациях, защита прав уязвимых групп."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 88
+      Внутриличностный интеллект: 80
+    mbti_preference:
+      extraversion: 30
+      thinking: -50
+      judging: 40
+    top_roles: [Empathizer, Believer, Peace Keeper, Coach]
+
+  - id: journalist
+    name_ru: "Журналист"
+    name_en: "Journalist"
+    category: social
+    description_ru: "Сбор информации, написание новостных и аналитических материалов."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Лингвистический интеллект: 88
+      Межличностный интеллект: 75
+      Внутриличностный интеллект: 70
+    mbti_preference:
+      extraversion: 30
+      intuition: 50
+      thinking: 0
+      judging: -10
+    top_roles: [Storyteller, Philomath, Catalyst, Brainstormer]
+
+  - id: lawyer
+    name_ru: "Юрист"
+    name_en: "Lawyer"
+    category: social
+    description_ru: "Юридическое консультирование, представление интересов в суде, ведение договоров."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Лингвистический интеллект: 85
+      Логико-математический интеллект: 70
+      Межличностный интеллект: 70
+    mbti_preference:
+      extraversion: 20
+      thinking: 60
+      judging: 60
+      assertive: 50
+    top_roles: [Analyst, Storyteller, Commander, Strategist]
+
+  - id: public_relations
+    name_ru: "Специалист по связям с общественностью"
+    name_en: "Public Relations Specialist"
+    category: social
+    description_ru: "Управление общественным образом организации, работа со СМИ."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 85
+      Межличностный интеллект: 85
+    mbti_preference:
+      extraversion: 70
+      intuition: 30
+      thinking: -10
+      judging: 30
+    top_roles: [Storyteller, Optimist, Catalyst, Chameleon]
+
+  - id: diplomat
+    name_ru: "Дипломат"
+    name_en: "Diplomat"
+    category: social
+    description_ru: "Представление интересов государства за рубежом, ведение переговоров."
+    cluster_preference: balanced
+    gardner_ideal:
+      Лингвистический интеллект: 85
+      Межличностный интеллект: 88
+      Внутриличностный интеллект: 80
+    mbti_preference:
+      extraversion: 30
+      intuition: 40
+      thinking: 0
+      judging: 40
+    top_roles: [Peace Keeper, Storyteller, Strategist, Chameleon]
+
+  - id: counselor
+    name_ru: "Консультант психологического центра"
+    name_en: "Mental Health Counselor"
+    category: social
+    description_ru: "Психологическая поддержка клиентов, групповая и индивидуальная работа."
+    cluster_preference: balanced
+    gardner_ideal:
+      Межличностный интеллект: 85
+      Внутриличностный интеллект: 85
+      Лингвистический интеллект: 75
+    mbti_preference:
+      extraversion: 20
+      thinking: -50
+      judging: 0
+    top_roles: [Empathizer, Believer, Coach, Peace Keeper]
+
+  # ============================================================
+  # Trades & Applied (6)
+  # ============================================================
+
+  - id: pilot
+    name_ru: "Пилот гражданской авиации"
+    name_en: "Commercial Pilot"
+    category: trades
+    description_ru: "Управление воздушным судном, ответственность за безопасность пассажиров."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Пространственно-визуальный интеллект: 85
+      Телесно-кинестетический интеллект: 80
+      Логико-математический интеллект: 70
+    mbti_preference:
+      extraversion: 0
+      thinking: 50
+      judging: 70
+      assertive: 50
+    top_roles: [Focus Expert, Commander, Deliverer, Time Keeper]
+
+  - id: chef
+    name_ru: "Шеф-повар"
+    name_en: "Chef"
+    category: trades
+    description_ru: "Разработка меню, руководство кухней, контроль качества блюд."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 75
+      Натуралистический интеллект: 70
+      Межличностный интеллект: 65
+    mbti_preference:
+      extraversion: 30
+      intuition: 20
+      thinking: 0
+      judging: 30
+    top_roles: [Brainstormer, Commander, Catalyst, Self-Believer]
+
+  - id: skilled_tradesperson
+    name_ru: "Квалифицированный рабочий"
+    name_en: "Skilled Tradesperson"
+    category: trades
+    description_ru: "Выполнение работ, требующих специальных навыков (электрик, сварщик, столяр и т.д.)."
+    cluster_preference: balanced
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 80
+      Пространственно-визуальный интеллект: 70
+    mbti_preference:
+      extraversion: 0
+      thinking: 30
+      judging: 40
+    top_roles: [Deliverer, Problem Solver, Focus Expert, Time Keeper]
+
+  - id: mechanic
+    name_ru: "Автомеханик"
+    name_en: "Auto Mechanic"
+    category: trades
+    description_ru: "Диагностика и ремонт автомобилей и других транспортных средств."
+    cluster_preference: balanced
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 80
+      Логико-математический интеллект: 65
+      Пространственно-визуальный интеллект: 70
+    mbti_preference:
+      thinking: 30
+      judging: 30
+    top_roles: [Problem Solver, Deliverer, Focus Expert, Analyst]
+
+  - id: athlete
+    name_ru: "Профессиональный спортсмен"
+    name_en: "Professional Athlete"
+    category: trades
+    description_ru: "Тренировки и выступления на профессиональном уровне в выбранном виде спорта."
+    cluster_preference: mobilized
+    gardner_ideal:
+      Телесно-кинестетический интеллект: 92
+      Внутриличностный интеллект: 75
+    mbti_preference:
+      extraversion: 30
+      thinking: 0
+      judging: 40
+      assertive: 70
+    top_roles: [Winner, Self-Believer, Focus Expert, Commander]
+
+  - id: park_ranger
+    name_ru: "Сотрудник национального парка"
+    name_en: "Park Ranger / Forester"
+    category: trades
+    description_ru: "Охрана природных территорий, экологический мониторинг, работа с посетителями."
+    cluster_preference: balanced
+    gardner_ideal:
+      Натуралистический интеллект: 88
+      Телесно-кинестетический интеллект: 65
+      Межличностный интеллект: 60
+    mbti_preference:
+      extraversion: -10
+      thinking: 0
+      judging: 30
+    top_roles: [Believer, Empathizer, Philomath, Peace Keeper]

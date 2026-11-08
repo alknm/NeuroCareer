@@ -1,0 +1,17 @@
+{
+  "backend_resolved": "template",
+  "model": "qwen2.5:7b-instruct",
+  "n_respondents": 5,
+  "top_n_per_respondent": 5,
+  "n_explanations": 25,
+  "backend_used_counts": {
+    "template": 25
+  },
+  "timing_seconds": {
+    "mean": 0.0,
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.001,
+    "total": 0.0
+  }
+}

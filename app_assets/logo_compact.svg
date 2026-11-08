@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="NeuroCareer">
+  <defs>
+    <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#2b6cb0"/>
+      <stop offset="100%" stop-color="#26b8a0"/>
+    </linearGradient>
+    <linearGradient id="brainFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a7ca5" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#26b8a0" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4,6)" fill="none" stroke="url(#grad2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 6
+             C12 6 6 16 6 24
+             C6 30 10 34 14 36
+             C13 41 14 47 20 49
+             C26 54 35 54 40 49
+             L40 12
+             C37 8 30 6 24 6 Z"
+          fill="url(#brainFill2)"/>
+    <path d="M14 18 C18 20 22 20 26 18"/>
+    <path d="M12 28 C20 31 28 29 34 26"/>
+    <path d="M16 40 C22 42 30 41 35 38"/>
+    <circle cx="24" cy="11" r="1.6" fill="#2b6cb0" stroke="none"/>
+    <circle cx="36" cy="22" r="1.6" fill="#26b8a0" stroke="none"/>
+  </g>
+  <g transform="translate(55,0)" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="700">
+    <text x="0" y="32" font-size="22" fill="#1f3a5f">Neuro<tspan fill="#1aa884">Career</tspan></text>
+    <text x="1" y="48" font-size="9" font-weight="500" letter-spacing="1.5" fill="#5a6a7a">HYBRID  CAREER  GUIDANCE</text>
+  </g>
+</svg>

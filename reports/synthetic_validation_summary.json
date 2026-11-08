@@ -1,0 +1,18 @@
+{
+  "ks_pass_count": 35,
+  "ks_total": 38,
+  "frobenius_relative_continuous": 0.1343,
+  "frobenius_relative_roles": 0.2271,
+  "synth_silhouette": 0.1771,
+  "synth_cluster_sizes": [
+    241,
+    142,
+    117
+  ],
+  "real_silhouette": 0.24,
+  "real_cluster_sizes": [
+    30,
+    8,
+    9
+  ]
+}

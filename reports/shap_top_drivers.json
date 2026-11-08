@@ -1,0 +1,462 @@
+{
+  "Focus Expert": [
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.1228415461062059,
+      "signed_mean_shap": 0.006238864172153066,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.10826333251858802,
+      "signed_mean_shap": -0.010473734869970917,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIЛогика",
+      "feature_short": "MBTI-Логика",
+      "abs_importance": 0.05915845880498065,
+      "signed_mean_shap": -0.0002747413244167249,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Optimist": [
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.1036111944544918,
+      "signed_mean_shap": 0.009222566615673644,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.07766154570302176,
+      "signed_mean_shap": -0.005722957504810569,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.061797476491511925,
+      "signed_mean_shap": -0.010678948293839594,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Brainstormer": [
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.11812958648752526,
+      "signed_mean_shap": -0.011561461679947715,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.07655652671827998,
+      "signed_mean_shap": 0.0042810876878296295,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.07235176042583162,
+      "signed_mean_shap": 0.011271261817956662,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Catalyst": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.23799399892796916,
+      "signed_mean_shap": -0.026155190438895533,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.11366237467480905,
+      "signed_mean_shap": -0.008286089344508533,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.05105996084289885,
+      "signed_mean_shap": -0.004237120240809355,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Analyst": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.3203775165863074,
+      "signed_mean_shap": 0.00148444366707277,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.22113157441380454,
+      "signed_mean_shap": 0.02840213425649457,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.05848589344813969,
+      "signed_mean_shap": 0.005139128626987216,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Winner": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.2360693018807676,
+      "signed_mean_shap": 0.006972692890042572,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.05346461115596582,
+      "signed_mean_shap": 0.004773041214385501,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.044800204533876974,
+      "signed_mean_shap": 0.007687476805952132,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Storyteller": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.31046465048872923,
+      "signed_mean_shap": -0.02617054399500651,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.14413811759944672,
+      "signed_mean_shap": -0.00645116712276536,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Пространственно-визуальный интеллект",
+      "feature_short": "Пространственно-визуальный i",
+      "abs_importance": 0.04908830606003154,
+      "signed_mean_shap": -0.010692808265764587,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Problem Solver": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.20608648565734652,
+      "signed_mean_shap": -0.002781025164830397,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.11124332187168307,
+      "signed_mean_shap": 0.016218875343055703,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.060010373542900175,
+      "signed_mean_shap": 0.008113759793085266,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Strategist": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.14237145817052393,
+      "signed_mean_shap": 0.02264502549046035,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Пространственно-визуальный интеллект",
+      "feature_short": "Пространственно-визуальный i",
+      "abs_importance": 0.054043841982487115,
+      "signed_mean_shap": 0.012483528755187127,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.04576704873379711,
+      "signed_mean_shap": 0.0024698393775026365,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Thinker": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.23004238056961587,
+      "signed_mean_shap": 0.02249976798263502,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.09517752176656427,
+      "signed_mean_shap": -0.009488245730111823,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.06529217658930607,
+      "signed_mean_shap": 0.00897232714749179,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Believer": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.07006991840396581,
+      "signed_mean_shap": -0.010584216887888988,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.06655585057150377,
+      "signed_mean_shap": -0.0027436967981855826,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.04176688599743394,
+      "signed_mean_shap": -0.003916748505718327,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Time Keeper": [
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.21039974034524875,
+      "signed_mean_shap": 0.02201753141874592,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.18199704852202156,
+      "signed_mean_shap": 0.008488573723119506,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.16801460223559259,
+      "signed_mean_shap": -0.023818192132292415,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Peace Keeper": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.15812733234766688,
+      "signed_mean_shap": 0.019275034035912218,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.11273277545432049,
+      "signed_mean_shap": -0.009422124955044537,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.08043493998835677,
+      "signed_mean_shap": -0.0012411124259865329,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Deliverer": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.12231199393974826,
+      "signed_mean_shap": -0.0015353877178636147,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.12167540665340916,
+      "signed_mean_shap": 0.011424558440360524,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.051146440669097584,
+      "signed_mean_shap": -0.007846886374053768,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Commander": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.07932858632842889,
+      "signed_mean_shap": -0.0008211096477638042,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.059746250136613804,
+      "signed_mean_shap": -0.006075066952369881,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.04099193304637064,
+      "signed_mean_shap": -0.007128692689032628,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Philomath": [
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.08481543705212978,
+      "signed_mean_shap": 0.008008267229336365,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.050823388311432835,
+      "signed_mean_shap": 0.005009393590344686,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.050583644423902605,
+      "signed_mean_shap": -0.0036983608982140382,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Chameleon": [
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.1280961582308537,
+      "signed_mean_shap": -0.010578250739013775,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Пространственно-визуальный интеллект",
+      "feature_short": "Пространственно-визуальный i",
+      "abs_importance": 0.06071983062284192,
+      "signed_mean_shap": -0.008215931771552587,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Музыкальный интеллект",
+      "feature_short": "Музыкальный intel.",
+      "abs_importance": 0.05989055677345112,
+      "signed_mean_shap": 0.011071482739601464,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Coach": [
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.24905785138213132,
+      "signed_mean_shap": -0.03546510434380333,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.12995842121926768,
+      "signed_mean_shap": -0.0021882595397282345,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.08246322867182686,
+      "signed_mean_shap": -0.008203849089289008,
+      "direction": "high feature -> better rank"
+    }
+  ],
+  "Self-Believer": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.11884581274851758,
+      "signed_mean_shap": 0.0009005441667274753,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.05730779330486406,
+      "signed_mean_shap": 0.008171823900499448,
+      "direction": "high feature -> worse rank"
+    },
+    {
+      "feature": "Пространственно-визуальный интеллект",
+      "feature_short": "Пространственно-визуальный i",
+      "abs_importance": 0.044037558812978175,
+      "signed_mean_shap": 0.010130088909329307,
+      "direction": "high feature -> worse rank"
+    }
+  ],
+  "Empathizer": [
+    {
+      "feature": "Логико-математический интеллект",
+      "feature_short": "Логико-математический intel.",
+      "abs_importance": 0.19349120994843738,
+      "signed_mean_shap": -0.00026138267548838777,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIЭкстраверт",
+      "feature_short": "MBTI-Экстраверт",
+      "abs_importance": 0.07239757427016587,
+      "signed_mean_shap": -0.011500885816326998,
+      "direction": "high feature -> better rank"
+    },
+    {
+      "feature": "MBTIПланирующие",
+      "feature_short": "MBTI-Планирующие",
+      "abs_importance": 0.04228897359928931,
+      "signed_mean_shap": 0.0005418895171802367,
+      "direction": "high feature -> worse rank"
+    }
+  ]
+}

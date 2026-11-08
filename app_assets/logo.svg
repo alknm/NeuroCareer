@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120" role="img" aria-label="NeuroCareer">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#2b6cb0"/>
+      <stop offset="60%" stop-color="#2c91b5"/>
+      <stop offset="100%" stop-color="#26b8a0"/>
+    </linearGradient>
+    <linearGradient id="brainFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a7ca5" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#26b8a0" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brain (left): stylized half-brain made of two arcs + folds -->
+  <g transform="translate(10,10)" fill="none" stroke="url(#grad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 12
+             C18 12 8 28 8 42
+             C8 54 16 62 22 64
+             C20 72 22 82 32 86
+             C40 96 56 96 64 88
+             L64 22
+             C60 14 50 12 40 12 Z"
+          fill="url(#brainFill)"/>
+    <!-- folds inside brain -->
+    <path d="M22 30 C28 34 34 34 40 30"/>
+    <path d="M20 46 C30 50 40 48 50 44"/>
+    <path d="M24 64 C32 68 42 66 52 62"/>
+    <path d="M30 80 C38 84 48 82 56 78"/>
+    <!-- electrode dots -->
+    <circle cx="40" cy="20" r="2.2" fill="#2b6cb0" stroke="none"/>
+    <circle cx="58" cy="34" r="2.2" fill="#2c91b5" stroke="none"/>
+    <circle cx="60" cy="58" r="2.2" fill="#26b8a0" stroke="none"/>
+  </g>
+
+  <!-- EEG → bars transition (middle/right) -->
+  <g transform="translate(90,40)" fill="none" stroke="url(#grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- EEG-style wave that flattens and then rises -->
+    <path d="M0 30
+             L8 30  L12 12  L16 48  L22 18  L26 42  L32 24
+             L40 30
+             L52 30"/>
+  </g>
+  <!-- ascending career bars -->
+  <g transform="translate(150,28)">
+    <rect x="0"  y="44" width="10" height="22" rx="2" fill="#3a7ca5"/>
+    <rect x="14" y="32" width="10" height="34" rx="2" fill="#2c91b5"/>
+    <rect x="28" y="18" width="10" height="48" rx="2" fill="#26b8a0"/>
+    <rect x="42" y="4"  width="10" height="62" rx="2" fill="#1aa884"/>
+    <!-- arrow above bars -->
+    <path d="M2 38 L48 6" stroke="#1aa884" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M40 6 L50 6 L50 16" stroke="#1aa884" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(215, 0)" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="700">
+    <text x="0" y="58" font-size="36" fill="#1f3a5f">Neuro<tspan fill="#1aa884">Career</tspan></text>
+    <text x="2" y="86" font-size="13" font-weight="500" letter-spacing="2" fill="#5a6a7a">HYBRID  CAREER  GUIDANCE</text>
+  </g>
+</svg>

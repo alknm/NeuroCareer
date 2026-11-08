@@ -1,0 +1,19 @@
+# Minimal runtime dependencies for the NeuroCareer web app (app.py).
+# Tested with Python 3.10.0 on Windows 11.
+# Versions use compatible-release operators so patch updates are allowed.
+
+# Data + modeling foundation
+pandas>=2.2,<3.0
+numpy>=1.26,<2.3
+scipy>=1.14,<2.0
+scikit-learn>=1.6,<2.0
+joblib>=1.4,<2.0
+
+# IO
+openpyxl>=3.1,<4.0
+PyYAML>=6.0,<7.0
+
+# UI + charts + PDF
+streamlit>=1.57,<2.0
+plotly>=6.0,<7.0
+reportlab>=4.5,<5.0

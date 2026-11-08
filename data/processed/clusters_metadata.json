@@ -1,0 +1,73 @@
+{
+  "k": 3,
+  "random_state": 2,
+  "features_used": [
+    "neiryIAPF",
+    "neiryIAF",
+    "neiryBaseline Fatigue score",
+    "neiryFatigue score",
+    "neiryBaseline Alpha Gravity",
+    "neiryAlpha Gravity",
+    "neiryBaseline Concentration index",
+    "neiryConcentration index",
+    "neiryBaseline Relaxation index",
+    "neiryRelaxation index",
+    "neiryBaseline Reverse Fatigue",
+    "neiryReverse Fatigue",
+    "neiryAccumulated Fatigue",
+    "neiryTheta",
+    "neiryAlpha",
+    "neiryBeta",
+    "neiryTheta peak frequency",
+    "neiryAlpha peak frequency",
+    "neiryBeta peak frequency",
+    "neiryChill",
+    "neiryStress",
+    "neiryFocus",
+    "neiryAnger",
+    "neirySelf-control"
+  ],
+  "scaler": "StandardScaler",
+  "silhouette": 0.24002001393411698,
+  "sizes": [
+    30,
+    8,
+    9
+  ],
+  "label_map": {
+    "0": "balanced",
+    "1": "mobilized",
+    "2": "depleted"
+  },
+  "permutation_info": {
+    "balanced_orig_id": 2,
+    "mobilized_orig_id": 1,
+    "depleted_orig_id": 0
+  },
+  "nirm_reported": {
+    "k": 3,
+    "silhouette": 0.24,
+    "sizes": [
+      30,
+      8,
+      9
+    ],
+    "centroids_baseline": {
+      "neiryBaseline Concentration index": [
+        1.65,
+        3.72,
+        1.02
+      ],
+      "neiryBaseline Relaxation index": [
+        0.75,
+        0.34,
+        1.37
+      ],
+      "neiryBaseline Fatigue score": [
+        1.63,
+        0.67,
+        4.03
+      ]
+    }
+  }
+}

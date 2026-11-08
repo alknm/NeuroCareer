@@ -1,0 +1,78 @@
+{
+  "n_respondents": 47,
+  "n_professions_in_kb": 64,
+  "weights": {
+    "gardner": 0.3,
+    "mbti": 0.2,
+    "cluster": 0.1,
+    "roles": 0.4
+  },
+  "top1_score_stats": {
+    "count": 47.0,
+    "mean": 85.0,
+    "std": 3.82,
+    "min": 76.61,
+    "25%": 82.51,
+    "50%": 85.47,
+    "75%": 87.66,
+    "max": 91.58
+  },
+  "top10_score_stats": {
+    "count": 470.0,
+    "mean": 81.8,
+    "std": 4.15,
+    "min": 72.63,
+    "25%": 78.39,
+    "50%": 81.88,
+    "75%": 84.75,
+    "max": 91.58
+  },
+  "top1_category_distribution": {
+    "it": 14,
+    "science": 8,
+    "engineering": 6,
+    "trades": 6,
+    "arts": 4,
+    "business": 4,
+    "education": 3,
+    "healthcare": 1,
+    "social": 1
+  },
+  "top10_category_distribution": {
+    "it": 127,
+    "engineering": 117,
+    "science": 55,
+    "trades": 48,
+    "arts": 41,
+    "business": 36,
+    "education": 23,
+    "social": 14,
+    "healthcare": 9
+  },
+  "n_unique_professions_seen_at_top1": 24,
+  "n_unique_professions_seen_in_top10": 54,
+  "top10_most_recommended_top1": {
+    "Инженер по тестированию": 5,
+    "UX-дизайнер": 3,
+    "Статистик": 3,
+    "Инженер-программист": 3,
+    "Frontend разработчик": 3,
+    "Маркетинг-менеджер": 3,
+    "Автомеханик": 3,
+    "Карьерный консультант": 3,
+    "Квалифицированный рабочий": 2,
+    "Инженер аэрокосмической отрасли": 2
+  },
+  "top10_most_recommended_overall": {
+    "Инженер-механик": 23,
+    "Инженер-программист": 23,
+    "Инженер нефтегазовой отрасли": 23,
+    "Автомеханик": 21,
+    "DevOps инженер": 21,
+    "Инженер-строитель": 21,
+    "Квалифицированный рабочий": 20,
+    "UX-дизайнер": 19,
+    "Frontend разработчик": 18,
+    "Инженер машинного обучения": 16
+  }
+}

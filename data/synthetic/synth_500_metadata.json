@@ -1,0 +1,103 @@
+{
+  "n_samples": 500,
+  "random_state": 42,
+  "method": "GaussianCopulaSynthesizer (SDV)",
+  "marginal_distribution": "gaussian_kde (sdv default override)",
+  "feature_groups": {
+    "id": [
+      "ФИО"
+    ],
+    "gardner": [
+      "Натуралистический интеллект",
+      "Внутриличностный интеллект",
+      "Логико-математический интеллект",
+      "Лингвистический интеллект",
+      "Телесно-кинестетический интеллект",
+      "Пространственно-визуальный интеллект",
+      "Музыкальный интеллект",
+      "Экзистенциальный интеллект",
+      "Межличностный интеллект"
+    ],
+    "mbti_type": [
+      "MBTIabbrev"
+    ],
+    "mbti_scales": [
+      "MBTIИнтроверт",
+      "MBTIЭкстраверт",
+      "MBTIРеалистичные",
+      "MBTIИнтуитивные",
+      "MBTIПринципы",
+      "MBTIЛогика",
+      "MBTIИщущие",
+      "MBTIПланирующие",
+      "MBTIОсторожные",
+      "MBTIУверенные"
+    ],
+    "mbti_independent": [
+      "MBTIЭкстраверт",
+      "MBTIИнтуитивные",
+      "MBTIЛогика",
+      "MBTIПланирующие",
+      "MBTIУверенные"
+    ],
+    "roles": [
+      "Focus Expert",
+      "Optimist",
+      "Brainstormer",
+      "Catalyst",
+      "Analyst",
+      "Winner",
+      "Storyteller",
+      "Problem Solver",
+      "Strategist",
+      "Thinker",
+      "Believer",
+      "Time Keeper",
+      "Peace Keeper",
+      "Deliverer",
+      "Commander",
+      "Philomath",
+      "Chameleon",
+      "Coach",
+      "Self-Believer",
+      "Empathizer"
+    ],
+    "neiry": [
+      "neiryIAPF",
+      "neiryIAF",
+      "neiryBaseline Fatigue score",
+      "neiryFatigue score",
+      "neiryBaseline Alpha Gravity",
+      "neiryAlpha Gravity",
+      "neiryBaseline Concentration index",
+      "neiryConcentration index",
+      "neiryBaseline Relaxation index",
+      "neiryRelaxation index",
+      "neiryBaseline Reverse Fatigue",
+      "neiryReverse Fatigue",
+      "neiryAccumulated Fatigue",
+      "neiryTheta",
+      "neiryAlpha",
+      "neiryBeta",
+      "neiryTheta peak frequency",
+      "neiryAlpha peak frequency",
+      "neiryBeta peak frequency",
+      "neiryChill",
+      "neiryStress",
+      "neiryFocus",
+      "neiryAnger",
+      "neirySelf-control"
+    ]
+  },
+  "invariants_enforced": {
+    "role_permutation_1_to_20": true,
+    "mbti_pair_sum_100": true,
+    "gardner_clipped_0_100": true,
+    "mbti_clipped_0_100": true,
+    "mbti_type_derived_from_scales": true
+  },
+  "checks": {
+    "valid_role_permutations": 500,
+    "unique_mbti_types": 31
+  }
+}
