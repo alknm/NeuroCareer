@@ -65,11 +65,19 @@ sdv (>=1.36), tabulate
 
 ## Launching the system
 
-```powershell
-cd c:\Users\ik\Documents\maga\disser\system
+```bash
+git clone https://github.com/alknm/NeuroCareer.git
+cd NeuroCareer
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux/macOS
+pip install -r requirements.txt
 streamlit run app.py
 # opens http://localhost:8501
 ```
+
+Alternatively, run `run.cmd` (Windows) or `./run.sh` (Linux/macOS) from the
+project folder - they create the environment and start the app automatically.
 
 For natural-language explanations, install Ollama once (one-time manual step):
 see [`OLLAMA_SETUP.md`](OLLAMA_SETUP.md). The system also works without it

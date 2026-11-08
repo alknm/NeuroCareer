@@ -46,7 +46,7 @@ curl http://localhost:11434/api/tags
 ## Step 4: Re-run the explainer
 
 ```powershell
-cd c:\Users\ik\Documents\maga\disser\system
+cd NeuroCareer          # project folder (wherever you cloned it)
 python scripts/08_generate_explanations.py
 # Backend will now resolve to "ollama" automatically.
 # Each explanation takes ~10-25 seconds on RTX 4060 Laptop with Qwen 2.5 7B.

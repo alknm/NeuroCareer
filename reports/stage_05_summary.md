@@ -5,7 +5,7 @@ desktop-grade application. The result is a single command that launches a
 local web app demonstrating the entire pipeline end-to-end:
 
 ```powershell
-cd c:\Users\ik\Documents\maga\disser\system
+cd NeuroCareer          # project folder (wherever you cloned it)
 streamlit run app.py
 # opens http://localhost:8501 in the default browser
 ```
