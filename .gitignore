@@ -18,3 +18,6 @@ data/raw/
 *.pdf
 ~$*
 reports/_*.png
+
+# Aggregated reanalysis results (no participant data)
+!reanalysis/results/*.csv
